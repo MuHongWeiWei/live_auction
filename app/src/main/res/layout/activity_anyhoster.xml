@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rl_rtmpc_videos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></RelativeLayout>
+
+        <include layout="@layout/layout_title_bar"></include>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="0dp"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:padding="10dp"
+        tools:layout_editor_absoluteY="73dp">
+
+        <TextView
+            android:id="@+id/tv_speak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/speaker"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/blue"
+            app:layout_constraintBottom_toBottomOf="@+id/speaker"
+            app:layout_constraintStart_toEndOf="@+id/speaker"
+            app:layout_constraintTop_toTopOf="@+id/speaker" />
+
+        <ImageView
+            android:id="@+id/speaker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_price"
+            app:layout_constraintTop_toBottomOf="@+id/type"
+            app:srcCompat="@drawable/speak" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/blue"
+            app:layout_constraintBottom_toBottomOf="@+id/money"
+            app:layout_constraintStart_toEndOf="@+id/money"
+            app:layout_constraintTop_toTopOf="@+id/money" />
+
+        <ImageView
+            android:id="@+id/money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eye"
+            app:srcCompat="@drawable/money_bag" />
+
+        <ImageView
+            android:id="@+id/eye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/eye" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/blue"
+            app:layout_constraintBottom_toBottomOf="@+id/type"
+            app:layout_constraintStart_toEndOf="@+id/type"
+            app:layout_constraintTop_toTopOf="@+id/type" />
+
+        <TextView
+            android:id="@+id/txt_watcher_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/blue"
+            app:layout_constraintBottom_toBottomOf="@+id/eye"
+            app:layout_constraintStart_toEndOf="@+id/eye"
+            app:layout_constraintTop_toTopOf="@+id/eye" />
+
+        <ImageView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/eye"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_watcher_number"
+            app:layout_constraintStart_toEndOf="@+id/txt_watcher_number"
+            app:layout_constraintTop_toTopOf="@+id/txt_watcher_number"
+            app:srcCompat="@drawable/type" />
+    </android.support.constraint.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Space
+            android:id="@+id/space_chat_list_right"
+            android:layout_width="72dp"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="56.0dip"
+            android:layout_marginLeft="4.0dip"
+            android:background="#FFB5C5" />
+
+        <FrameLayout
+            android:id="@+id/fl_chat_list"
+            android:layout_width="fill_parent"
+            android:layout_height="300.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="56.0dip"
+            android:layout_marginLeft="4.0dip"
+            android:layout_toLeftOf="@id/space_chat_list_right"
+            android:gravity="bottom">
+
+            <include layout="@layout/layout_chatlist" />
+        </FrameLayout>
+
+        <ViewAnimator
+            android:id="@+id/va_bottom_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="6.0dip">
+
+            <ViewAnimator
+                android:id="@+id/va_controls"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:measureAllChildren="true"
+                android:padding="5.0dip">
+                <com.example.fly.anyrtcdemo.weight.BottomControl
+                    android:id="@+id/ll_host_audience_controls"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:baselineAligned="false"
+                    android:gravity="bottom"
+                    android:paddingBottom="5.0dip">
+                    <ImageView
+                        android:id="@+id/iv_host_text"
+                        style="@style/style_live_ibtn_controls"
+                        android:onClick="OnBtnClicked"
+                        android:src="@drawable/selector_btn_chat" />
+
+                </com.example.fly.anyrtcdemo.weight.BottomControl>
+            </ViewAnimator>
+            <include layout="@layout/layout_live_input" />
+        </ViewAnimator>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

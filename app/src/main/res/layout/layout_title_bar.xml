@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/title"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_alignParentTop="true"
+    android:background="#FFFF33">
+
+    <View
+        android:id="@+id/view_temp"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#14191A" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/view_temp"
+        android:ellipsize="end"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:text="朋友圈"
+        android:textColor="#f000"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+    <Button
+        android:visibility="gone"
+        android:background="@color/transparent"
+        android:maxLines="1"
+        android:maxLength="20"
+        android:ellipsize="end"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:text="@string/str_connect_hoster"
+        android:id="@+id/btn_rtc"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="3dp"
+        android:padding="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/iv_camera"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="3dp"
+        android:padding="13dp"
+        android:src="@drawable/fx_default_useravatar" />
+
+</RelativeLayout>

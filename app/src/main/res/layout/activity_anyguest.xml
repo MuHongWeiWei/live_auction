@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rl_rtmpc_videos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/title"
+        android:background="@color/qq"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+        <View
+            android:id="@+id/view_temp"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#14191A" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:textColor="#f000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/view_temp"
+            android:ellipsize="end"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:text=""
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+    </RelativeLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="-1dp"
+        android:layout_marginRight="0dp"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:padding="10dp"
+        tools:layout_editor_absoluteY="48dp">
+
+        <TextView
+            android:id="@+id/tv_speaker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/blue"
+            app:layout_constraintBottom_toBottomOf="@+id/speaker2"
+            app:layout_constraintStart_toEndOf="@+id/speaker2"
+            app:layout_constraintTop_toTopOf="@+id/speaker2" />
+
+        <ImageView
+            android:id="@+id/eye2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/eye" />
+
+        <ImageView
+            android:id="@+id/type2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/eye"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_watcher_number"
+            app:layout_constraintStart_toEndOf="@+id/txt_watcher_number"
+            app:layout_constraintTop_toTopOf="@+id/txt_watcher_number"
+            app:srcCompat="@drawable/type" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/blue"
+            app:layout_constraintBottom_toBottomOf="@+id/type2"
+            app:layout_constraintStart_toEndOf="@+id/type2"
+            app:layout_constraintTop_toTopOf="@+id/type2" />
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/blue"
+            app:layout_constraintBottom_toBottomOf="@+id/money2"
+            app:layout_constraintStart_toEndOf="@+id/money2"
+            app:layout_constraintTop_toTopOf="@+id/money2" />
+
+        <ImageView
+            android:id="@+id/speaker2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_total"
+            app:layout_constraintTop_toBottomOf="@+id/type2"
+            app:srcCompat="@drawable/speak" />
+
+        <ImageView
+            android:id="@+id/money2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eye2"
+            app:srcCompat="@drawable/money_bag" />
+
+        <TextView
+            android:id="@+id/txt_watcher_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/transparent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/blue"
+            app:layout_constraintBottom_toBottomOf="@+id/eye2"
+            app:layout_constraintStart_toEndOf="@+id/eye2"
+            app:layout_constraintTop_toTopOf="@+id/eye2" />
+    </android.support.constraint.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Space
+            android:id="@+id/space_chat_list_right"
+            android:layout_width="72dp"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="56.0dip"
+            android:layout_marginLeft="4.0dip"
+            android:background="#FFB5C5" />
+
+        <FrameLayout
+            android:id="@+id/fl_chat_list"
+            android:layout_width="fill_parent"
+            android:layout_height="300.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="56.0dip"
+            android:layout_marginLeft="4.0dip"
+            android:layout_toLeftOf="@id/space_chat_list_right"
+            android:gravity="bottom">
+
+            <include layout="@layout/layout_chatlist" />
+        </FrameLayout>
+
+        <ViewAnimator
+            android:id="@+id/va_bottom_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="6.0dip">
+
+            <ViewAnimator
+                android:id="@+id/va_controls"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:measureAllChildren="true"
+                android:padding="5.0dip">
+
+                <com.example.fly.anyrtcdemo.weight.BottomControl
+
+                    android:id="@+id/ll_host_audience_controls"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:baselineAligned="false"
+                    android:gravity="bottom"
+                    android:paddingBottom="5.0dip">
+
+                    <ImageView
+                        android:id="@+id/iv_host_text"
+                        style="@style/style_live_ibtn_controls"
+                        android:onClick="OnBtnClicked"
+                        android:src="@drawable/selector_btn_chat" />
+
+                </com.example.fly.anyrtcdemo.weight.BottomControl>
+            </ViewAnimator>
+            <include layout="@layout/layout_live_input" />
+
+        </ViewAnimator>
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/fam"
+            android:layout_width="71dp"
+            android:layout_height="182dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="58dp"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:menu_fab_size="mini"
+            app:menu_icon="@drawable/money"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="five"
+                android:src="@drawable/five"
+                app:fabSize="mini"
+                app:pressedTranslationZ="25dp" />
+
+
+            <com.github.clans.fab.FloatingActionButton
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:onClick="ten"
+                android:src="@drawable/ten"
+                app:fabSize="mini"
+                app:pressedTranslationZ="25dp" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="fifty"
+                android:src="@drawable/fifty"
+                app:fabSize="mini"
+                app:pressedTranslationZ="25dp" />
+
+        </com.github.clans.fab.FloatingActionMenu>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

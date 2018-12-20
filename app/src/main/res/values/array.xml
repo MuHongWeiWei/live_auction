@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="type_array">
+        <item>生鮮食品</item>
+        <item>生活用品</item>
+        <item>辦公用品</item>
+        <item>清潔用品</item>
+        <item>居家收納</item>
+        <item>其他</item>
+    </string-array>
+</resources>
