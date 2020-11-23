@@ -10,6 +10,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
@@ -167,6 +168,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                                                     .setDuration(3000)
                                                     .show();
                                         }else{
+                                            Log.e("GGG", task.getException().toString());
                                             signUp.reset();
                                             CookieBar.build(LoginActivity.this)
                                                     .setTitle("註冊失敗")
